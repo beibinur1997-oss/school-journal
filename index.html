@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мектеп Электронды Журналы</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; background-color: #f4f7f6; }
+    h1 { color: #333; }
+    .form-container { background: #fff; padding: 20px; border-radius: 8px; max-width: 500px; margin-bottom: 20px; }
+    input, select, button { padding: 10px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+    button { background-color: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; }
+    button:hover { background-color: #218838; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #007bff; color: white; }
+  </style>
+</head>
+<body>
+
+  <h1>Мектеп журналы</h1>
+
+  <div class="form-container">
+    <h3>Баға қою</h3>
+    <input type="text" id="studentName" placeholder="Оқушының аты-жөні">
+    <input type="text" id="subject" placeholder="Пән атауы (мысалы, Информатика)">
+    <input type="number" id="grade" placeholder="Бағасы (1-5 немесе 100)" min="1" max="100">
+    <button onclick="addGrade()">Журналға енгізу</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>№</th>
+        <th>Оқушының аты-жөні</th>
+        <th>Пән</th>
+        <th>Бағасы</th>
+      </tr>
+    </thead>
+    <tbody id="journalTable">
+      <!-- Деректер осы жерге скрипт арқылы қосылады -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
